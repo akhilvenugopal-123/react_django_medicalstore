@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #5b4dc1;
+        }
+        form {
+            width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: rgba(237, 227, 227, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(8, 7, 16, 0.6);
+        }
+        form * {
+            color: #080710;
+            outline: none;
+            border: none;
+        }
+        form h3 {
+            font-size: 28px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        input {
+            height: 40px;
+            width: 80%;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 0 10px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        button {
+            width: 85%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid #080710;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #080710;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <h3>Signup Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email or Phone" name="email" id="email">
+
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Password" id="password1" name="password1">
+
+        <label for="password2">Confirm Password</label>
+        <input type="password" placeholder="Confirm Password" id="password2" name="password2">
+
+        <button type="submit">Signup</button>
+        
+        <a href="{% url 'login' %}">I already have an account</a>
+    </form>
+</body>
+</html>

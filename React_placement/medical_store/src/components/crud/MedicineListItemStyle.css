@@ -1,0 +1,19 @@
+.card {
+    background-color: #ccc8c0; 
+    background-image: url("C:\Users\akhil\Downloads\wengang-zhai-BFB7ydn1-DI-unsplash.jpg"); 
+    background-size: cover; 
+    background-position: center;
+  }
+
+
+  .btn-primary {
+    background-color: #5365b2;
+    margin-right: 5px;
+  }
+  
+  
+  .btn-info {
+    background-color: #498d51; 
+    color: #fff; 
+    margin-right: 5px;
+  }
